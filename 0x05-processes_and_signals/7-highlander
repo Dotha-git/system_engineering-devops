@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # A Bash script that prints "To infinity and beyond" indefinitely
-# and responds to SIGTERM with "I am invincible!!!"
+# and prints "I am invincible!!!" when receiving SIGTERM
 
-# Function to handle SIGTERM
+# Trap SIGTERM and print message instead of exiting
 trap 'echo "I am invincible!!!"' SIGTERM
 
 # Infinite loop
