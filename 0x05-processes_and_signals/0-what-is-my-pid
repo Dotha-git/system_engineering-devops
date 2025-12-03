@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that displays all running processes with user, PID, CPU/MEM usage, and hierarchy
+# A Bash script that lists all running processes with user, PID, CPU/MEM usage, and hierarchy
 
 ps -ef --forest
