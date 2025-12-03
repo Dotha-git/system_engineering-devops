@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# Stops the 7-highlander process
+# 7-highlander: Infinite loop that handles SIGTERM
 
-# Get the PID of the 7-highlander process
-PID=$(pgrep -f 7-highlander)
+# Trap SIGTERM and print "I am invincible!!!" instead of terminating
+trap 'echo "I am invincible!!!"' SIGTERM
 
-# Send SIGTERM if PID exists
-if [ -n "$PID" ]; then
-    kill "$PID"
-fi
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
