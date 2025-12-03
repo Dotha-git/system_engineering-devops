@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that lists all running processes with UID, PID, PPID, and full command in a hierarchical format
+# A Bash script that displays its own Process ID (PID)
 
-ps -eo uid,pid,ppid,cmd --forest
+echo "$$"
