@@ -1,5 +1,4 @@
-#!/bin/bash
-# File: 0-what-is-my-pid
-# Description: Prints its own Process ID (PID)
+#!/usr/bin/env bash
+# A Bash script that displays its own Process ID (PID)
 
 echo "$$"
