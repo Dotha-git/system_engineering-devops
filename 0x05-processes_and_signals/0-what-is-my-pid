@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# A Bash script that lists all running processes with user, PID, CPU/MEM usage, and hierarchy
+# A Bash script that lists all running processes with UID, PID, PPID, and full command in a hierarchical format
 
-ps -ef --forest
+ps -eo uid,pid,ppid,cmd --forest
