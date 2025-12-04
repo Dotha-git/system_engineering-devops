@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script that prints indefinitely and handles SIGTERM without exiting
+# Script that displays messages indefinitely and handles SIGTERM
 
 trap 'echo "I am invincible!!!"' SIGTERM
 
