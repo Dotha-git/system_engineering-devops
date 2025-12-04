@@ -1,11 +1,11 @@
-#!/usr/bin/env bash
-# 7-highlander: Infinite loop with SIGTERM handling
+#!/bin/bash
 
-# When SIGTERM is received, print "I am invincible!!!" instead of exiting
+# Trap SIGTERM and print a message instead of exiting
 trap 'echo "I am invincible!!!"' SIGTERM
 
-# Infinite loop displaying the phrase every 2 seconds
-while true; do
+# Infinite loop
+while true
+do
     echo "To infinity and beyond"
     sleep 2
 done
