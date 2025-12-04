@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# Prints "To infinity and beyond" indefinitely and handles TERM immediately
+# 7-highlander: prints "To infinity and beyond" indefinitely
+# and reacts to SIGTERM by printing "I am invincible!!!"
 
-trap 'echo I am invincible!!!' TERM
+# Trap SIGTERM and print a message instead of exiting
+trap 'echo "I am invincible!!!"' TERM
 
-while :
-do
+# Infinite loop
+while true; do
     echo "To infinity and beyond"
     sleep 2
 done
