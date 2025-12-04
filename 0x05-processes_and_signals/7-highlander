@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Prints messages indefinitely and responds to SIGTERM without exiting
+# Prints "To infinity and beyond" indefinitely and handles TERM signal
 
-# Flush output immediately to be seen by checker
-trap 'printf "I am invincible!!!\n" >&1' SIGTERM
+trap 'echo I am invincible!!!' TERM
 
-while true; do
-    printf "To infinity and beyond\n" >&1
+while :
+do
+    echo "To infinity and beyond"
     sleep 2
 done
