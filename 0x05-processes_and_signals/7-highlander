@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-trap 'echo "I am invincible!!!"' TERM
+# 67-stop_me_if_you_can: sends SIGTERM to the 7-highlander process
 
-while true; do
-    echo "To infinity and beyond"
-    sleep 2
-done
+PID=$(pgrep -f 7-highlander)
+
+if [ -n "$PID" ]; then
+    kill -TERM "$PID"
+fi
