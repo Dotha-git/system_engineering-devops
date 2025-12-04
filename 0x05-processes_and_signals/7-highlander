@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
 # Prints messages indefinitely and responds to TERM signal immediately
 
-# Disable buffering
-export PYTHONUNBUFFERED=1
-export LC_ALL=C
-
 # Handle TERM signal
 trap 'echo I am invincible!!!' TERM
 
 # Infinite loop
-while :
-do
-    echo "To infinity and beyond" >&1
-    sleep 2
+while true; do
+    echo "To infinity and beyond"
+    # Sleep in small increments so signal can be caught immediately
+    for i in {1..20}; do
+        sleep 0.1
+    done
 done
