@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Script that prints indefinitely and handles SIGTERM without exiting
-# Trap SIGTERM and respond instead of terminating
+
 trap 'echo "I am invincible!!!"' SIGTERM
+
 while true; do
     echo "To infinity and beyond"
     sleep 2
