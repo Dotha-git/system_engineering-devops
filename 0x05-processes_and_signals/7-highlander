@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
-# Prints messages indefinitely and responds to TERM signal immediately
+# Prints "To infinity and beyond" indefinitely and handles TERM immediately
 
-# Trap TERM and print the required message
 trap 'echo I am invincible!!!' TERM
 
-# Infinite loop
-while true; do
+while :
+do
     echo "To infinity and beyond"
-    # Replace long sleep with many short sleeps to catch signals quickly
-    for i in {1..20}; do
-        sleep 0.1
-    done
+    sleep 2
 done
