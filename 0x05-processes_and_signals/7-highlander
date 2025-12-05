@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# Displays messages indefinitely and handles SIGTERM
+# Displays a message indefinitely and handles SIGTERM
 
-# When SIGTERM is received, print the message
 trap "echo I am invincible!!!" SIGTERM
 
-# Infinite loop
 while true
 do
     echo "To infinity and beyond"
