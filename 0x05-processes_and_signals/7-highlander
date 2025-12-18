@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
+# Script that prints a message forever and handles SIGTERM
 
-# Trap SIGTERM and print a message instead of exiting
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo I am invincible!!!' SIGTERM
 
-# Infinite loop
 while true
 do
     echo "To infinity and beyond"
